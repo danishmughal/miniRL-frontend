@@ -2,6 +2,8 @@
 Frontend for miniRL - a simple and fast URL shortener. Built with Next.JS, React, and deployed with Now.sh. 
 Backend URL shortening service built with N-base encoding, using Flask + Python.
 
+**Live: https://minirl.now.sh/**
+
 ## Running Locally
 1. Install NVM (optional):
 

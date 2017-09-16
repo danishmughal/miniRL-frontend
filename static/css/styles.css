@@ -1,0 +1,30 @@
+/* Global styles */
+/* Component-level styles are located in specific component files */
+html,
+body,
+body > div:first-of-type,
+#__next,
+#__next > div:first-of-type {
+  width: 100%;
+  height: 100%;
+}
+
+html,
+body {
+  background: #2b5876; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #2b5876,
+    #4e4376
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom right,
+    #2b5876,
+    #4e4376
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.inputContainer {
+  height: 80%;
+  padding-top: 10%;
+}
