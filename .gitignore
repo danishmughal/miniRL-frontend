@@ -1,0 +1,6 @@
+.DS_Store
+# JS + Webpack + Node + NextJS
+node_modules/*
+.next
+package-lock.json
+
