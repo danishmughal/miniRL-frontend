@@ -1,13 +1,13 @@
-import { Component } from 'react';
-import { Button } from 'reactstrap';
-import ArrowIcon from 'react-icons/lib/fa/angle-right';
+import { Component } from "react";
+import { Button } from "reactstrap";
+import ArrowIcon from "react-icons/lib/fa/angle-right";
 
 class SearchBox extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      url: '',
+      url: ""
     };
   }
 
@@ -17,8 +17,8 @@ class SearchBox extends Component {
     this.props.onSubmit(this.state.url);
   };
 
-  handleKeyPress = (e) => {
-    if (e.key === 'Enter') {
+  handleKeyPress = e => {
+    if (e.key === "Enter") {
       this.submitUrl();
     }
   };
@@ -30,7 +30,7 @@ class SearchBox extends Component {
           <div className="loader">
             <div id="largeBox" />
             <div id="smallBox" />
-          </div>{' '}
+          </div>{" "}
         </Button>
       );
     }
@@ -62,10 +62,10 @@ class SearchBox extends Component {
 }
 
 const styles = () =>
-  (<style global jsx>
+  <style global jsx>
     {`
       .urlField {
-        min-width: 350px;
+        min-width: 300px;
         max-width: 800px;
         display: flex;
       }
@@ -139,6 +139,6 @@ const styles = () =>
       }
       ===== Loader Styles
     `}
-  </style>);
+  </style>;
 
 export default SearchBox;
