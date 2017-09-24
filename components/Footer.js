@@ -18,12 +18,12 @@ const styles = {
   footerStyle: {
     alignSelf: 'center',
     fontSize: '12px',
-    color: '#dfebff',
+    color: 'black',
     paddingBottom: '20px',
     textAlign: 'center',
   },
   linkStyle: {
-    color: 'white',
+    // color: 'white',
   },
 };
 

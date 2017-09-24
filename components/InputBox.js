@@ -6,7 +6,7 @@ import axios from 'axios';
 import SearchBox from './SearchBox';
 import ResultCard from './ResultCard';
 
-const API_URL = 'https://minirl.herokuapp.com';
+const API_URL = 'http://www.tyny.co';
 
 class InputBox extends Component {
   constructor(props) {
@@ -120,7 +120,7 @@ class InputBox extends Component {
     return (
       <div className="inputBox">
         <div className="inputTop">
-          <div className="logo">miniRL</div>
+          <div className="logo">minirl</div>
           <SearchBox onSubmit={this.submitUrl} loading={this.state.loading} />
         </div>
 
@@ -148,7 +148,7 @@ const styles = () =>
       }
       .logo {
         font-size: 60px;
-        color: #dfebff;
+        color: black;
       }
 
       .resultsContainer {

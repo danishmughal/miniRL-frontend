@@ -11,17 +11,19 @@ body > div:first-of-type,
 
 html,
 body {
-  background: #2b5876; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
+  font-family: "Raleway", sans-serif;
+  background: #f8f7f7;
+  /* background: #2b5876; fallback for old browsers */
+  /* background: -webkit-linear-gradient(
     to right,
     #2b5876,
     #4e4376
-  ); /* Chrome 10-25, Safari 5.1-6 */
+  ); 
   background: linear-gradient(
     to bottom right,
     #2b5876,
     #4e4376
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  );  */
 }
 
 .inputContainer {

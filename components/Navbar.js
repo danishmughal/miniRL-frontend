@@ -1,13 +1,5 @@
-import { Component } from "react";
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink
-} from "reactstrap";
+import { Component } from 'react';
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
 
 class AppNavbar extends Component {
   constructor(props) {
@@ -15,12 +7,12 @@ class AppNavbar extends Component {
 
     this.toggle = this.toggle.bind(this);
     this.state = {
-      isOpen: false
+      isOpen: false,
     };
   }
   toggle() {
     this.setState({
-      isOpen: !this.state.isOpen
+      isOpen: !this.state.isOpen,
     });
   }
   render() {
@@ -32,15 +24,12 @@ class AppNavbar extends Component {
           <Navbar inverse toggleable>
             <NavbarToggler right onClick={this.toggle} />
             <NavbarBrand style={brandStyle} href="/">
-              miniRL
+              minirl
             </NavbarBrand>
             <Collapse isOpen={this.state.isOpen} navbar>
               <Nav className="ml-auto" navbar>
                 <NavItem>
-                  <NavLink
-                    style={textStyle}
-                    href="https://github.com/KaranPhadnisNaik/miniRL"
-                  >
+                  <NavLink style={textStyle} href="https://github.com/KaranPhadnisNaik/miniRL">
                     Github
                   </NavLink>
                 </NavItem>
@@ -65,11 +54,11 @@ class AppNavbar extends Component {
 
 const styles = {
   brandStyle: {
-    color: "#dfebff"
+    color: 'black',
   },
   textStyle: {
-    color: "#dfebff"
-  }
+    color: 'black',
+  },
 };
 
 export default AppNavbar;

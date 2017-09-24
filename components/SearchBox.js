@@ -1,13 +1,13 @@
-import { Component } from "react";
-import { Button } from "reactstrap";
-import ArrowIcon from "react-icons/lib/fa/angle-right";
+import { Component } from 'react';
+import { Button } from 'reactstrap';
+import ArrowIcon from 'react-icons/lib/fa/angle-right';
 
 class SearchBox extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      url: ""
+      url: '',
     };
   }
 
@@ -17,8 +17,8 @@ class SearchBox extends Component {
     this.props.onSubmit(this.state.url);
   };
 
-  handleKeyPress = e => {
-    if (e.key === "Enter") {
+  handleKeyPress = (e) => {
+    if (e.key === 'Enter') {
       this.submitUrl();
     }
   };
@@ -30,7 +30,7 @@ class SearchBox extends Component {
           <div className="loader">
             <div id="largeBox" />
             <div id="smallBox" />
-          </div>{" "}
+          </div>{' '}
         </Button>
       );
     }
@@ -62,7 +62,7 @@ class SearchBox extends Component {
 }
 
 const styles = () =>
-  <style global jsx>
+  (<style global jsx>
     {`
       .urlField {
         min-width: 300px;
@@ -79,11 +79,17 @@ const styles = () =>
         border-radius: 0;
         border-top-left-radius: 2px;
         border-bottom-left-radius: 2px;
+
+        background-color: white;
+      }
+
+      .urlField > input:focus {
+        background-color: white;
       }
 
       .urlField > button {
         font-size: 1em;
-        background-color: #3498db;
+        background-color: #53E3AE;
         border: 0;
         border-radius: 0;
         border-top-right-radius: 2px;
@@ -94,6 +100,11 @@ const styles = () =>
 
       .urlField > button:focus {
         outline:0;
+        background-color: #53E3AE;
+      }
+
+      .urlField > button:hover {
+        background-color: #53E3AE;
       }
 
       // Loader styles =====
@@ -114,7 +125,7 @@ const styles = () =>
       .loader #smallBox {
         height: 1.6em;
         width: 1.6em;
-        background-color: #3498db;
+        background-color: #53E3AE;
         position: fixed;
         z-index: 1;
         outline: 1px solid transparent;
@@ -139,6 +150,6 @@ const styles = () =>
       }
       ===== Loader Styles
     `}
-  </style>;
+  </style>);
 
 export default SearchBox;
