@@ -4,3 +4,5 @@ node_modules/*
 .next
 package-lock.json
 
+static/css/.sass-cache/*
+static/css/styles.css.map

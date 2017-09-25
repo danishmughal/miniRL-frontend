@@ -6,27 +6,162 @@ body > div:first-of-type,
 #__next,
 #__next > div:first-of-type {
   width: 100%;
+  height: 100%; }
+
+.pageContainer {
+  font-family: "Montserrat";
   height: 100%;
-}
+  min-height: 100%;
+  position: relative;
+  background-color: #f2f0eb; }
+  .pageContainer .messageBar {
+    position: absolute;
+    width: 100%;
+    border-radius: 0;
+    z-index: 1;
+    height: 50px; }
+  .pageContainer .navbarContainer {
+    background-color: #e75457; }
+    .pageContainer .navbarContainer .navbar .navbar-brand {
+      color: white;
+      font-weight: 700; }
+    .pageContainer .navbarContainer .navbar .nav-link {
+      color: white;
+      font-weight: 400; }
+  .pageContainer .inputContainer {
+    height: 400px;
+    padding-top: 100px;
+    background-color: #e75457;
+    margin-bottom: 60px;
+    position: relative; }
+    .pageContainer .inputContainer .logo {
+      margin-bottom: 100px; }
+      .pageContainer .inputContainer .logo img {
+        width: 150px; }
+    .pageContainer .inputContainer .inputBox {
+      display: block;
+      text-align: center;
+      width: 100%; }
+      .pageContainer .inputContainer .inputBox .searchBoxContainer {
+        display: block;
+        position: absolute;
+        bottom: -25px;
+        left: 0;
+        right: 0; }
+        .pageContainer .inputContainer .inputBox .searchBoxContainer .urlField {
+          max-width: 800px;
+          height: 80px;
+          display: flex;
+          margin-left: auto;
+          margin-right: auto; }
+          .pageContainer .inputContainer .inputBox .searchBoxContainer .urlField input {
+            width: 100%;
+            flex: 1;
+            font-size: 2em;
+            border: 0;
+            border-radius: 0;
+            border-top-left-radius: 2px;
+            border-bottom-left-radius: 2px;
+            background-color: white;
+            font-family: "Montserrat";
+            font-weight: 200; }
+          .pageContainer .inputContainer .inputBox .searchBoxContainer .urlField input:focus {
+            background-color: white; }
+          .pageContainer .inputContainer .inputBox .searchBoxContainer .urlField button {
+            font-size: 1em;
+            background-color: #28a5b6;
+            border: 0;
+            border-radius: 0;
+            border-top-right-radius: 2px;
+            border-bottom-right-radius: 2px;
+            cursor: pointer;
+            width: 100px; }
+          .pageContainer .inputContainer .inputBox .searchBoxContainer .urlField button:focus {
+            outline: 0;
+            background-color: #28a5b6; }
+          .pageContainer .inputContainer .inputBox .searchBoxContainer .urlField button:hover {
+            background-color: #28a5b6; }
+          .pageContainer .inputContainer .inputBox .searchBoxContainer .urlField .loader {
+            width: 2em;
+            height: 2em;
+            animation: loaderAnim 0.5s infinite;
+            outline: 1px solid transparent;
+            margin-left: 20px; }
+          .pageContainer .inputContainer .inputBox .searchBoxContainer .urlField .loader #largeBox {
+            height: 2em;
+            width: 2em;
+            background-color: #ececec;
+            outline: 1px solid transparent;
+            position: fixed; }
+          .pageContainer .inputContainer .inputBox .searchBoxContainer .urlField .loader #smallBox {
+            height: 2em;
+            width: 2em;
+            background-color: #28a5b6;
+            position: fixed;
+            z-index: 1;
+            outline: 1px solid transparent;
+            animation: smallBoxAnim 0.5s alternate infinite ease-in-out; }
+@keyframes smallBoxAnim {
+  0% {
+    transform: scale(0.2); }
+  100% {
+    transform: scale(0.75); } }
+@keyframes loaderAnim {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(90deg); } }
+      .pageContainer .inputContainer .inputBox .resultsContainer {
+        margin-top: 25px;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto; }
+        .pageContainer .inputContainer .inputBox .resultsContainer .resultCard {
+          opacity: 0.9;
+          display: flex;
+          flex-direction: row; }
+        .pageContainer .inputContainer .inputBox .resultsContainer .right-section {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          border-left: 1px solid #dfebff; }
+          .pageContainer .inputContainer .inputBox .resultsContainer .right-section .hits {
+            color: gray; }
+        .pageContainer .inputContainer .inputBox .resultsContainer .right-section .copy button {
+          cursor: pointer;
+          border-color: #28a5b6;
+          color: #28a5b6; }
+        .pageContainer .inputContainer .inputBox .resultsContainer .right-section .copy button:hover {
+          border-color: #28a5b6;
+          color: white;
+          background-color: #28a5b6; }
+        .pageContainer .inputContainer .inputBox .resultsContainer .right-section .divider {
+          width: 100%;
+          border-top: 1px solid #dfebff;
+          margin-top: 25px;
+          margin-bottom: 25px; }
+        .pageContainer .inputContainer .inputBox .resultsContainer .card-block {
+          position: relative; }
+          .pageContainer .inputContainer .inputBox .resultsContainer .card-block .miniRlLink {
+            font-size: 32px;
+            margin-top: 20px; }
+            .pageContainer .inputContainer .inputBox .resultsContainer .card-block .miniRlLink a {
+              color: #e5565b; }
+          .pageContainer .inputContainer .inputBox .resultsContainer .card-block .originalLink {
+            position: absolute;
+            bottom: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+            color: gray; }
+  .pageContainer .footer {
+    position: absolute;
+    font-size: 14px;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px; }
 
-html,
-body {
-  font-family: "Raleway", sans-serif;
-  background: #f8f7f7;
-  /* background: #2b5876; fallback for old browsers */
-  /* background: -webkit-linear-gradient(
-    to right,
-    #2b5876,
-    #4e4376
-  ); 
-  background: linear-gradient(
-    to bottom right,
-    #2b5876,
-    #4e4376
-  );  */
-}
-
-.inputContainer {
-  height: 80%;
-  padding-top: 10%;
-}
+/*# sourceMappingURL=styles.css.map */

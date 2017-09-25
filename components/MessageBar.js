@@ -25,7 +25,7 @@ class MessageBar extends React.Component {
   render() {
     return (
       <Alert
-        style={styles.messageBarStyle}
+        className="messageBar"
         color={this.props.color ? this.props.color : 'info'}
         isOpen={this.state.visible}
         toggle={this.onDismiss}
@@ -35,15 +35,5 @@ class MessageBar extends React.Component {
     );
   }
 }
-
-const styles = {
-  messageBarStyle: {
-    position: 'absolute',
-    width: '100%',
-    borderRadius: '0',
-    zIndex: 1,
-    height: '50px',
-  },
-};
 
 export default MessageBar;

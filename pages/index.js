@@ -24,7 +24,7 @@ class App extends Component {
 
   render() {
     return (
-      <div style={styles.layoutStyle}>
+      <div className="pageContainer">
         <Head>
           <title>miniRL</title>
           <meta charSet="utf-8" />
@@ -35,7 +35,10 @@ class App extends Component {
             integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
             crossOrigin="anonymous"
           />
-          <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway" rel="stylesheet" />
+          <link
+            href="https://fonts.googleapis.com/css?family=Montserrat:100,200,400,700"
+            rel="stylesheet"
+          />
           <link rel="stylesheet" href="/static/css/styles.css" />
 
           {/* Global CSS Styles for full-page layout */}
@@ -46,35 +49,19 @@ class App extends Component {
           visible={this.state.messageBarVisible}
           color={this.state.messageBarColor}
         />
+
         <Navbar />
 
-        <div style={styles.appContainerStyle}>
-          <div className="container inputContainer d-flex justify-content-center">
-            <InputBox updateMessageBar={this.updateMessageBar} />
-          </div>
+        <div className="inputContainer d-flex justify-content-center">
+          <InputBox updateMessageBar={this.updateMessageBar} />
+        </div>
 
-          <div className="container d-flex justify-content-center">
-            <Footer />
-          </div>
+        <div className="container d-flex justify-content-center footer">
+          <Footer />
         </div>
       </div>
     );
   }
 }
-
-const styles = {
-  appContainerStyle: {
-    height: '100%',
-    justifyContent: 'space-between',
-    display: 'flex',
-    flexDirection: 'column',
-  },
-  layoutStyle: {
-    justifyContent: 'space-between',
-    display: 'flex',
-    flexDirection: 'column',
-    height: '100%',
-  },
-};
 
 export default App;

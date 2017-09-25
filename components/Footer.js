@@ -1,30 +1,12 @@
 import { Component } from 'react';
 
 const Footer = () =>
-  (<footer style={styles.footerStyle}>
+  (<footer>
     <div>
       Made with &#10084; in San Francisco by{' '}
-      <a style={styles.linkStyle} href="https://github.com/danishmughal">
-        @danishmughal
-      </a>{' '}
-      and{' '}
-      <a style={styles.linkStyle} href="https://github.com/KaranPhadnisNaik">
-        @karanphadnisnaik
-      </a>.
+      <a href="https://github.com/danishmughal">@danishmughal</a> and{' '}
+      <a href="https://github.com/KaranPhadnisNaik">@karanphadnisnaik</a>.
     </div>
   </footer>);
-
-const styles = {
-  footerStyle: {
-    alignSelf: 'center',
-    fontSize: '12px',
-    color: 'black',
-    paddingBottom: '20px',
-    textAlign: 'center',
-  },
-  linkStyle: {
-    // color: 'white',
-  },
-};
 
 export default Footer;

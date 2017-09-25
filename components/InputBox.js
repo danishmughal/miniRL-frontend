@@ -7,6 +7,7 @@ import SearchBox from './SearchBox';
 import ResultCard from './ResultCard';
 
 const API_URL = 'http://www.tyny.co';
+const LINK_URL = 'tyny.co';
 
 class InputBox extends Component {
   constructor(props) {
@@ -48,7 +49,7 @@ class InputBox extends Component {
         url,
       })
       .then((response) => {
-        miniRl = `${API_URL}/${response.data.hash}`;
+        miniRl = `${LINK_URL}/${response.data.hash}`;
         hits = response.data.hits;
         return { miniRl, hits };
       })
@@ -119,8 +120,11 @@ class InputBox extends Component {
   render() {
     return (
       <div className="inputBox">
-        <div className="inputTop">
-          <div className="logo">minirl</div>
+        <div className="logo">
+          <img src="/static/images/logo.png" alt="logo" />
+        </div>
+
+        <div className="searchBoxContainer">
           <SearchBox onSubmit={this.submitUrl} loading={this.state.loading} />
         </div>
 
@@ -129,32 +133,9 @@ class InputBox extends Component {
             {this.renderResult()}
           </TransitionGroup>
         </div>
-
-        {styles()}
       </div>
     );
   }
 }
-
-const styles = () =>
-  (<style global jsx>
-    {`
-      .inputBox {
-        text-align: 'center';
-        width: 600px;
-      }
-      .inputTop {
-        transition: all 3s;
-      }
-      .logo {
-        font-size: 60px;
-        color: black;
-      }
-
-      .resultsContainer {
-        margin-top: 20px;
-      }
-    `}
-  </style>);
 
 export default InputBox;
